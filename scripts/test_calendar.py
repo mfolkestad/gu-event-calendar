@@ -1,4 +1,4 @@
-from calendar_tools.path import DATA_DIR, OUTPUT_DIR
+from calendar_tools.path import DOCS_DIR
 from ics import Calendar, Event
 
 calendar = Calendar()
@@ -12,5 +12,5 @@ event = Event(
 
 calendar.events.add(event)
 
-with open(OUTPUT_DIR / "calendar.ics", "w") as file:
+with open(DOCS_DIR / "calendar.ics", "w") as file:
     file.writelines(calendar.serialize_iter())
