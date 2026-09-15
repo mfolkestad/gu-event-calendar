@@ -10,3 +10,5 @@ EVENT_API = (
     "https://www.gu.se/api/search/rest/apps/"
     "external_web/searchers/event_en"
 )
+
+ECON_EVENTS_URL = "https://www.gu.se/nationalekonomi-statistik/var-forskning/seminarier-inom-nationalekonomi"

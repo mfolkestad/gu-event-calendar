@@ -11,3 +11,4 @@ Current version takes all events from 2026-09-01
 - Create separate calendars for each event area.
 - Get the time dynamics right.
 - Use my personal url
+- Econ events
