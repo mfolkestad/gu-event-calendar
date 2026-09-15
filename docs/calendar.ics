@@ -3,6 +3,17 @@ VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
 CATEGORIES:Seminar
+DESCRIPTION:Navigating Accountability: The Feminist Institutionalist Accountability Compass and the Case of Sexual Corruption
+DTEND:20260923T110000Z
+LAST-MODIFIED:20260810T220000Z
+LOCATION:Stora Skansen (B336)\, Sprängkullsgatan 19
+DTSTART:20260923T100000Z
+SUMMARY:QoG lunch seminar with Elin Bjarnegård
+UID:5f5774f4-a4b5-5f75-8b8f-4235b03f7c17@gu-event-calendar
+URL:https://www.gu.se/en/event/qog-lunch-seminar-with-elin-bjarnegard
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:Seminar
 DESCRIPTION:Luis Sattelmayer\, PhD student at the Centre for European Studies and Comparative Politics\, SciencesPo\, presents “Not in the Picture: Visual Descriptive Representation and Gender Gaps in Parties' Visual Communication”.
 DTEND:20260915T123000Z
 LAST-MODIFIED:20260621T220000Z
