@@ -12,4 +12,10 @@ jobs:
       - name: List files in the script repository
         run: |
           ls ${{ github.workspace }}/scripts
+      - name: Run the test script
+        run: |
+          python3 ${{ github.workspace }}/scripts/test_script.py  
+      - name: List output files
+        run: |
+            ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
