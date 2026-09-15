@@ -1,14 +1,12 @@
 import sys
-
 import requests
 from gu_event_calendar.event_parser import fetch_event, create_ical_event
 from gu_event_calendar.path import DOCS_DIR
 from ics import Calendar
+from gu_event_calendar.get_events import get_event_urls
 
-calendar_event_urllist = [
-    "https://www.gu.se/en/event/comparative-politics-seminar-with-luis-sattelmayer", "https://www.gu.se/en/event/reorienting-automation-reframing-ai-with-daniela-rosner-and-cristina-zaga", "https://www.gu.se/en/event/qog-lunch-seminar-with-elin-bjarnegard"
 
-]
+calendar_event_urllist = get_event_urls("2026-09-15", hits = 10)  # Fetch events starting from this date
 
 
 def main() -> int:
