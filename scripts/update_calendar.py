@@ -6,7 +6,7 @@ from ics import Calendar
 from gu_event_calendar.get_events import get_event_urls
 
 
-calendar_event_urllist = get_event_urls("2026-09-15", hits = 10)  # Fetch events starting from this date
+calendar_event_urllist = get_event_urls("2026-09-01", hits = 10)  # Fetch events starting from this date
 
 
 def main() -> int:
@@ -23,7 +23,7 @@ def main() -> int:
         print("No events were fetched; the calendar was not updated.", file=sys.stderr)
         return 1
 
-    output_path = DOCS_DIR / "calendar2.ics"
+    output_path = DOCS_DIR / "calendar.ics"
     try:
         with output_path.open("w", encoding="utf-8") as file:
             file.writelines(calendar.serialize_iter())
