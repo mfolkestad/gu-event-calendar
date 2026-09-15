@@ -6,8 +6,12 @@ from ics import Calendar
 from gu_event_calendar.get_events import get_event_urls
 
 
-calendar_event_urllist = get_event_urls("2026-09-01", hits = 10)  # Fetch events starting from this date
+calendar_event_urllist = get_event_urls("2026-09-01", hits = 200)  # Fetch events starting from this date
 
+url = "https://www.gu.se/en/event/research-seminars-sts"
+
+event_data = fetch_event(url)
+create_ical_event(event_data)
 
 def main() -> int:
     calendar = Calendar()
