@@ -5,7 +5,7 @@ from ics import Calendar
 calendar = Calendar()
 
 calendar_event_urllist = [
-    "https://www.gu.se/en/event/comparative-politics-seminar-with-luis-sattelmayer", "https://www.gu.se/en/event/reorienting-automation-reframing-ai-with-daniela-rosner-and-cristina-zaga"
+    "https://www.gu.se/en/event/comparative-politics-seminar-with-luis-sattelmayer", "https://www.gu.se/en/event/reorienting-automation-reframing-ai-with-daniela-rosner-and-cristina-zaga", "https://www.gu.se/en/event/qog-lunch-seminar-with-elin-bjarnegard"
 
 ]
 events = [fetch_event(url) for url in calendar_event_urllist]
