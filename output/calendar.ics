@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DURATION:PT1H15M
+DTSTART:20260915T131500Z
+SUMMARY:Comparative Politics Seminar with Luis Sattelmayer
+UID:35ae89b5-6a7b-4aa7-b61c-db5d097d6ac4@35ae.org
+END:VEVENT
+END:VCALENDAR
