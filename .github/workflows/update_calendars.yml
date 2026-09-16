@@ -36,8 +36,10 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked
 
-      - name: Generate calendar
-        run: uv run python scripts/update_calendar.py
+      - name: Generate econ calendar
+        run: uv run python scripts/econdep.py
+      - name: Generate society and economy calendar
+        run: uv run python scripts/society_and_economy.py
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v5.0.0

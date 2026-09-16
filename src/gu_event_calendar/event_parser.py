@@ -51,9 +51,11 @@ def parse_event(html: str) -> dict[str, str]:
 
 def clean_url(value: str) -> str:
     """Convert a Markdown URL such as [https://...](https://...) to a plain URL."""
+    if value is None:
+        return ""
     match = re.fullmatch(r"\[.*?]\((https?://.*?)\)", value.strip())
     return match.group(1) if match else value.strip()
-
+    
 
 def create_ical_event(data: dict[str, str]) -> Event:
     date = datetime.strptime(data["date"], "%d %b %Y").date()
@@ -69,7 +71,7 @@ def create_ical_event(data: dict[str, str]) -> Event:
     start = datetime.combine(date, start_time, tzinfo=STOCKHOLM)
     end = datetime.combine(date, end_time, tzinfo=STOCKHOLM)
 
-    url = clean_url(data["url"])
+    url = clean_url(data.get("url"))
 
     event = Event()
     event.name = data["title"]

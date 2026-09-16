@@ -6,15 +6,10 @@ from ics import Calendar
 from gu_event_calendar.get_events import get_event_urls
 
 
-calendar_event_urllist = get_event_urls("2026-09-01", hits = 200)  # Fetch events starting from this date
-
-url = "https://www.gu.se/en/event/research-seminars-sts"
-
-event_data = fetch_event(url)
-create_ical_event(event_data)
 
 def main() -> int:
     calendar = Calendar()
+    calendar_event_urllist = get_event_urls("2026-09-01",event_area = "Society and economy", hits = 200)  # Fetch events starting from this date
 
     for url in calendar_event_urllist:
         try:
@@ -27,7 +22,7 @@ def main() -> int:
         print("No events were fetched; the calendar was not updated.", file=sys.stderr)
         return 1
 
-    output_path = DOCS_DIR / "calendar.ics"
+    output_path = DOCS_DIR / "society_and_economy.ics"
     try:
         with output_path.open("w", encoding="utf-8") as file:
             file.writelines(calendar.serialize_iter())
