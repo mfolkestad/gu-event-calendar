@@ -86,8 +86,11 @@ def create_ical_event(data: dict[str, str]) -> Event:
 
     # Create a stable identifier from the source URL. Regenerating the
     # calendar will therefore update this event instead of duplicating it.
-    event.uid = f"{uuid.uuid5(uuid.NAMESPACE_URL, url)}@gu-event-calendar"
-
+    if url:
+        event.uid = f"{uuid.uuid5(uuid.NAMESPACE_URL, url)}@gu-event-calendar"
+    else:
+        event.uid= f"{uuid.uuid4()}@gu-event-calendar"
+        
     if last_modified := data.get("last modified"):
         event.last_modified = datetime.strptime(
             last_modified,
