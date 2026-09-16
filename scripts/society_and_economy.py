@@ -6,10 +6,11 @@ from ics import Calendar
 from gu_event_calendar.get_events import get_event_urls
 
 
+get_event_urls("2026-09-01",event_area = "Society and economy", hits = 200,  event_type = "Seminar",)  
 
 def main() -> int:
     calendar = Calendar()
-    calendar_event_urllist = get_event_urls("2026-09-01",event_area = "Society and economy", hits = 200)  # Fetch events starting from this date
+    calendar_event_urllist = get_event_urls("2026-09-01",event_area = "society and economy", hits = 200)  # Fetch events starting from this date
 
     for url in calendar_event_urllist:
         try:

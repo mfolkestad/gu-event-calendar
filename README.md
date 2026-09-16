@@ -1,7 +1,7 @@
 # GU EVENT CALENDAR
 
 This script creates a .ics calendar file for all "Society and Economy" seminars at Gothenburg University. 
-The calendar subscription link is avaiable at https://mfolkestad.github.io/gu-event-calendar/calendar.ics
+The calendar subscription link is avaiable at https://mfolkestad.github.io/gu-event-calendar/
 
 Current version takes all events from 2026-09-01
 

@@ -3,7 +3,7 @@ import json
 from gu_event_calendar.path import EVENT_API
 
 
-def fetch_event_list(date_from: str, event_type = "Seminar", event_area = "Society and economy", hits = 200) -> str:
+def fetch_event_list(date_from: str, event_type = "Seminar", event_area = "society and economy", hits = 200) -> str:
     """Return the URL of the GU event list page."""
     params = {
         "date_from": date_from,
@@ -34,7 +34,7 @@ def get_event_urls(date_from: str, **kwargs) -> list:
         date_from: Earliest event date to include.
 
     Keyword Args:
-        event_type: Event type to request. Defaults to ``"Seminar"``.
+        event_type: Event type to request. Defaults to ``"seminar"``.
         event_area: Event area to request. Defaults to
             ``"Society and economy"``.
         hits: Maximum number of events to request. Defaults to ``200``.
